@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import data from "./data"
 import './App.css';
 
 function App() {
@@ -51,89 +51,26 @@ function App() {
       <main class="main">
         <div class="content">
           <ul class="products">
+            
+            {
+              data.products.map(product => 
             <li>
               <div class="product">
-                <img className="product-img" src="/images/pant.jpg" alt="" />
+                <img className="product-img" src={product.image} alt="" />
                 <div class="product-name">
-                  <a href="product.hrml">pants </a>
+                  <a href="product.hrml">{ product.name} </a>
                 </div>
-                <div class="product-brand">Guiacciu</div>
-                <div class="product-price"> 50 </div>
+              <div class="product-brand">{product.brand}</div>
+                <div class="product-price"> {product.price} </div>
 
-                <div class="product-rating"> 4.5 starts (10 reviews) </div>
+                <div class="product-rating"> {product.rating} starts {product.numReviews} </div>
 
               </div>
             </li>
+            )
+          }
 
-            <li>
-              <div class="product">
-                <img className="product-img" src="/images/pant.jpg" alt="" />
-                <div class="product-name">
-                  <a href="product.hrml">pants </a>
-                </div>
-                <div class="product-brand">Guiacciu</div>
-                <div class="product-price"> 50 </div>
-
-                <div class="product-rating"> 4.5 starts (10 reviews) </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <img className="product-img" src="/images/pant.jpg" alt="" />
-                <div class="product-name">
-                  <a href="product.hrml">pants </a>
-                </div>
-                <div class="product-brand">Guiacciu</div>
-                <div class="product-price"> 50 </div>
-
-                <div class="product-rating"> 4.5 starts (10 reviews) </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <img className="product-img" src="/images/pant.jpg" alt="" />
-                <div class="product-name">
-                  <a href="product.hrml">pants </a>
-                </div>
-                <div class="product-brand">Guiacciu</div>
-                <div class="product-price"> 50 </div>
-
-                <div class="product-rating"> 4.5 starts (10 reviews) </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <img className="product-img" src="/images/pant.jpg" alt="" />
-                <div class="product-name">
-                  <a href="product.hrml">pants </a>
-                </div>
-                <div class="product-brand">Guiacciu</div>
-                <div class="product-price"> 50 </div>
-
-                <div class="product-rating"> 4.5 starts (10 reviews) </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <img className="product-img" src="/images/pant.jpg" alt="" />
-                <div class="product-name">
-                  <a href="product.hrml">pants </a>
-                </div>
-                <div class="product-brand">Guiacciu</div>
-                <div class="product-price"> 50 </div>
-
-                <div class="product-rating"> 4.5 starts (10 reviews) </div>
-
-              </div>
-            </li>
+           
           </ul>
         </div>
       </main>
